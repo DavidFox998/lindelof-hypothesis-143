@@ -8,14 +8,20 @@ noncomputable section
 def S4_C : ℝ := 11.42214868898
 
 theorem S4_gt_two_sqrt_13 : S4_C > 2 * Real.sqrt 13 := by
-  unfold S4_C
-  have h_sq : (3.606 : ℝ) ^ 2 > 13 := by norm_num
-  have h13_lt : Real.sqrt 13 < 3.606 := by
+  have h13_bound : Real.sqrt 13 < 3.606 := by
+    have h_lt : (13 : ℝ) < (3.606 : ℝ) ^ 2 := by norm_num
     calc Real.sqrt 13 < Real.sqrt ((3.606 : ℝ) ^ 2) := by
-          apply Real.sqrt_lt_sqrt (by positivity)
-          exact h_sq
+          exact Real.sqrt_lt_sqrt (by positivity) h_lt
          _ = 3.606 := Real.sqrt_sq (by positivity)
-  nlinarith
+  -- Now 2*√13 < 2*3.606 = 7.212 < 11.422
+  have h_final : 2 * Real.sqrt 13 < 11.42214868898 := by
+    calc 2 * Real.sqrt 13 < 2 * 3.606 := by
+          apply mul_lt_mul_of_pos_left h13_bound
+          norm_num
+         _ = 7.212 := by norm_num
+         _ < 11.42214868898 := by norm_num
+  unfold S4_C
+  exact h_final
 
 def Lindelof_mu_zero : Prop :=
   ∀ ε > 0, ∃ C > 0, ∀ t : ℝ, t ≥ 10 →
