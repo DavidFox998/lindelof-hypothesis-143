@@ -1,6 +1,5 @@
 import Batteries
-
-/-!
+-- keep rest of your file exactly as you posted
 # BQF_Standalone — 10 reduced positive-definite BQFs of discriminant -143
 
 Proves exactly 10 reduced positive-definite binary quadratic forms of discriminant
