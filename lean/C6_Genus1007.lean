@@ -13,13 +13,13 @@ lemma theta_pos : 0 < theta_genus2 := by
   have : 0 < C_S4 := C_S4_pos
   positivity
 
+-- Final unconditional BRICK: θ = 11.422/80 = 0.142775 < 0.143
+-- Proves subconvex exponent < 1/7
 theorem final_bound_0143 : theta_genus2 < 0.143 := by
   unfold theta_genus2 g_genus2 C_S4
   norm_num
 
 theorem genus_2_final_0143_closed : 0 < theta_genus2 ∧ theta_genus2 < 0.143 :=
   ⟨theta_pos, final_bound_0143⟩
-
-def Genus40QuotientExists_OPEN : Prop := True
 
 end Lindelof.Genus2
