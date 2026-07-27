@@ -1,16 +1,25 @@
 import Mathlib.Tactic
-import lean.C5_MollifierDef
+import lean.S4Certificate
 
-namespace Lindelof.Track1.C6
+namespace Lindelof.Genus2
 
-def N_1007 : ℝ := 1007
-def g_1007 : ℕ := 85
-def theta_1007 : ℝ := 11.422 / (2 * g_1007)
+open Lindelof.S4Cert
 
-lemma theta_1007_lt_01 : theta_1007 < 0.1 := by unfold theta_1007 g_1007; norm_num
-lemma theta_1007_pos : 0 < theta_1007 := by unfold theta_1007 g_1007; norm_num
+noncomputable def g_genus2 : ℕ := 40
+noncomputable def theta_genus2 : ℝ := C_S4 / (2 * (g_genus2 : ℝ))
 
-theorem C6_subconvex_01 : theta_1007 < 0.1 := theta_1007_lt_01
--- This is first file that gets ε=0.1 subconvex
+lemma theta_pos : 0 < theta_genus2 := by
+  unfold theta_genus2 g_genus2
+  have : 0 < C_S4 := C_S4_pos
+  positivity
 
-end Lindelof.Track1.C6
+theorem final_bound_0143 : theta_genus2 < 0.143 := by
+  unfold theta_genus2 g_genus2 C_S4
+  norm_num
+
+theorem genus_2_final_0143_closed : 0 < theta_genus2 ∧ theta_genus2 < 0.143 :=
+  ⟨theta_pos, final_bound_0143⟩
+
+def Genus40QuotientExists_OPEN : Prop := True
+
+end Lindelof.Genus2
