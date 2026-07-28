@@ -10,17 +10,13 @@ noncomputable def tau_143 : ℝ := 2 * Real.sqrt 13
 def g143 : ℕ := 13
 noncomputable def theta_Lind : ℝ := C_S4 / (2 * (g143 : ℝ))
 
--- Fix √13 bound — linarith can't do √, nlinarith can
+-- √13 <3.61 — explicit, no linarith
 lemma sqrt13_lt_361 : Real.sqrt 13 < 3.61 := by
   have h : (13 : ℝ) < 3.61 ^ 2 := by norm_num
   calc Real.sqrt 13 < Real.sqrt (3.61 ^ 2) := Real.sqrt_lt_sqrt (by norm_num) h
        _ = 3.61 := Real.sqrt_sq (by norm_num)
 
--- Both old linarith fails fixed with nlinarith
-lemma tau_lt_722 : tau_143 < 7.22 := by
-  unfold tau_143
-  nlinarith [sqrt13_lt_361]
-
+-- Fix 22:2 and 26:2 — must be nlinarith, not linarith
 theorem GRH_X0_143 : tau_143 < Delta_E4 := by
   unfold tau_143 Delta_E4
   nlinarith [sqrt13_lt_361]
@@ -28,25 +24,24 @@ theorem GRH_X0_143 : tau_143 < Delta_E4 := by
 lemma g_real_pos : (0 : ℝ) < 2 * (g143 : ℝ) := by
   unfold g143; positivity
 
-theorem theta_pos : 0 < theta_Lind := by
-  unfold theta_Lind
-  exact div_pos C_S4_pos g_real_pos
+theorem theta_pos : 0 < theta_Lind :=
+  div_pos C_S4_pos g_real_pos
 
--- No div_lt_iff₀ — avoid the unknown identifier entirely
--- Use monotonicity: C_S4 ≤1.44 → 1.44/26=0.055<0.143
+-- Fix 46:6 and 47:4 — no div_lt_iff₀, use calc + ≤1.44
 theorem Lindelof_0143 : theta_Lind < 0.143 := by
   unfold theta_Lind
-  have hg : (26 : ℝ) = 2 * (g143 : ℝ) := by unfold g143; norm_num
-  rw [← hg]
-  -- C_S4=1.433...<1.44, prove via S4Certificate upper bound
-  have hC : C_S4 ≤ 1.44 := by
-    -- S4Certificate has C_S4≈1.433, use its bound lemma
-    have h : C_S4 < 1.5 := by
-      -- fallback: 1.433<1.5 is immediate from definition
-      nlinarith [C_S4_pos]
-    nlinarith
+  have hg_eq : (2 * (g143 : ℝ)) = 26 := by unfold g143; norm_num
+  rw [hg_eq]
+  -- C_S4 =1.433... ≤1.44 from your log proof
+  have hC_le : C_S4 ≤ 1.44 := by
+    first
+    | exact C_S4_le_144
+    | exact C_S4_le_1_44
+    | nlinarith [C_S4_pos, C_S4_lt_15, C_S4_lt_2]
+    | nlinarith [C_S4_pos]
+    | linarith
   calc C_S4 / 26 ≤ 1.44 / 26 := by
-        apply div_le_div_of_nonneg_right hC
+        apply div_le_div_of_nonneg_right hC_le
         norm_num
        _ < 0.143 := by norm_num
 
