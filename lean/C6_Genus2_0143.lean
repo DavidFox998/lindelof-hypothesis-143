@@ -19,11 +19,12 @@ theorem GRH_X0_143 : tau_143 < Delta_E4 := by
   nlinarith [sqrt13_lt_361]
 
 theorem Lindelof_0143 : theta_Lind < 0.143 := by
-  unfold theta_Lind; norm_num
+  unfold theta_Lind
+  norm_num
 
 theorem P5_desert : (3993746143633 : ℕ) - 191 = 3993746143442 := by norm_num
 
 theorem final_closed : theta_Lind < 0.143 ∧ tau_143 < Delta_E4 :=
   ⟨Lindelof_0143, GRH_X0_143⟩
 
-end Lindelof.Genus2 Mathlib.Data.Real.Sqrt
+end Lindelof.Genus2
