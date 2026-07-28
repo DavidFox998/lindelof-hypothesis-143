@@ -1,4 +1,8 @@
+import Mathlib.Data.Real.Basic
 import Mathlib.Tactic
+
+-- BQF bound for Selberg trace — geometric side for S₄={2,3,19,191}
+-- Standalone — used for short geodesics = primes in S₄
 
 noncomputable def BQF_bound : ℝ := 3.0911
 noncomputable def log22_approx : ℝ := 3.0910
