@@ -16,7 +16,10 @@ lemma sqrt13_lt_361 : Real.sqrt 13 < 3.61 := by
 
 theorem GRH_X0_143 : tau_143 < Delta_E4 := by
   unfold tau_143 Delta_E4
-  nlinarith [sqrt13_lt_361]
+  calc 2 * Real.sqrt 13 < 2 * 3.61 := by
+        apply mul_lt_mul_of_pos_left sqrt13_lt_361
+        norm_num
+       _ < 23.796910 := by norm_num
 
 theorem Lindelof_0143 : theta_Lind < 0.143 := by
   unfold theta_Lind
