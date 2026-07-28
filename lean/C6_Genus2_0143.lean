@@ -26,4 +26,4 @@ theorem P5_desert : (3993746143633 : ℕ) - 191 = 3993746143442 := by norm_num
 theorem final_closed : theta_Lind < 0.143 ∧ tau_143 < Delta_E4 :=
   ⟨Lindelof_0143, GRH_X0_143⟩
 
-end Lindelof.Genus2
+end Lindelof.Genus2 Mathlib.Data.Real.Sqrt
