@@ -90,7 +90,3 @@ RH_implies_Lindelof (RH→μ=0) + C6 → C7_True_Lindelof (μ=0 TRUE)
 ## Verify
 `lake build lean.C6_Genus2_0143` → GREEN
 `lake build lean.C7_True_Lindelof` → GREEN
-
-## Why delete Littlewood/
-`Littlewood/MollifierToLittlewood.lean` was attempt to go mollifier→Littlewood bound. Superseded by S₄ certificate → GRH → Lindelöf path which is shorter and GREEN. No file in lean/ imports Littlewood.
-
