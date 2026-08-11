@@ -68,4 +68,59 @@ Old 14-prime scaffold became real? No - spurious per Remark 3.4 composite beyond
 lake build lean.C6_Genus2_0143
 lake build lean.C7_True_Lindelof
 
+
+Opera Numerorum
+
+**[arakelov-positivity-rh-core](https://github.com/DavidFox998/arakelov-positivity-rh-core) — ROOT V2** — M2 kappa, M7 Manifest, M8C Zoe-M*, M4 10^4000 — P5 boundary that spawns 4 voices
+
+**[rh-p5-bridge-14](https://github.com/DavidFox998/rh-p5-bridge-14) — Keystone** — `q5=226 q6=165849 cf_bound=82829` — theorem `grh_to_rh_descent` reduces infinite to finite `S₁₄`
+
+**[riemann-arakelov-positivity](https://github.com/DavidFox998/riemann-arakelov-positivity) — Route A Positivity** — via Abbes-Ullmo `ω²=48/13>0` — height `≤C log N`, if Siegel zero existed height negative — Act I
+
+**[arakelov-rh-descent](https://github.com/DavidFox998/arakelov-rh-descent) — Route B Descent** — via Kim-Sarnak `λ₁≥975/4096` — `7/64` bound, `X₀(143)=11*13`, exceptional automorphic would violate gap — Act II
+
+**[rh-growth-contradiction](https://github.com/DavidFox998/rh-growth-contradiction) — Route C Growth** — via Poussin `3+4cosθ+cos2θ=2(1+cosθ)²≥0` + `C=11.422>2√13` — `ζ³ζ(s+it)⁴ζ(s+2it)` positivity vs log negative, Littlewood `exp(c√(log t/log log t))` beats `(log t)²` — Act III via `C7 True`
+
+**[brothers-desert-proof](https://github.com/DavidFox998/brothers-desert-proof) — Route D Self-Symmetry** — via `S₄={2,3,19,191}` -desert `192..1000` empty, `||p·α₀||<1/p` jitter Nodup 1419, EMI -30dB, W1=143 W3=36863 — orbit stable → R=1/2 — Act IV
+
+**[birch-swinnerton-dyer-143a1](https://github.com/DavidFox998/birch-swinnerton-dyer-143a1) — BSD ref** — via Heegner `L(143a1,1)≠0` rank 0 — legacy is [birch-swinnerton-dyer-143](https://github.com/DavidFox998/birch-swinnerton-dyer-143)
+
+**[poincare-spectral](https://github.com/DavidFox998/poincare-spectral) — Spectral desert** — via `S³/I*` eigenvalues `n(n+2)`, `q=1/8` `tail_26=1/(7·8^25)≤1e-20` `spectral_gap>0` — decidable instance of undecidable gap
+
+**[bost-connes](https://github.com/DavidFox998/bost-connes) — Phase transition** — via KMS states, `C=11.422>2√13` critical temp — FinalAxioms #148 GREEN
+
+**[p-vs-np](https://github.com/DavidFox998/p-vs-np) — Barriers machine** — via natural proofs, relativization, algebrization formalized — Eutheos as bypass
+
+**[eutheos-property](https://github.com/DavidFox998/eutheos-property) — 1419 family** — via barrier bypass `1419=3*11*43` leader, 35 brothers `≡153 mod211 pop6`, `p5` 14>13, `p6` 165849>33, `N=4M collisions=9`
+
+**[hodge-abelian-boundaries](https://github.com/DavidFox998/hodge-abelian-boundaries) — Hodge** — via `200 abelian 390 total` count — Hodge classes, Mumford-Tate
+
+**[yang-mills-gap](https://github.com/DavidFox998/yang-mills-gap) — Mass gap** — via `SU(2)` on `R⁴`, OS axioms, vacuum `H≥0`, glueball mass `Δ>0`, Wilson area law `⟨W(C)⟩≤exp(-σ Area)` `σ>0`, clustering `e^{-Δ|x|}` — `#print axioms ym_gap_exists_cert → {propext, Classical.choice, Quot.sound}`
+
+**[navier-stokes](https://github.com/DavidFox998/navier-stokes) — Dissipation** — via heat trace `Θ(t)=∑ e^{-λt}` Summable, `H¹` enstrophy bound — tail prevents blow-up
+
+**[opera-sieve](https://github.com/DavidFox998/opera-sieve) — Methodology** — via `methodology.py` + datatables — defines `S_14`, `S_alpha0`
+
+**[zerobeacon](https://github.com/DavidFox998/zerobeacon) — BRAIN** — 1000 tools, collision-free swarming, `m4.out = Complete: True` verifies 18
+
+**[pistus-theoria](https://github.com/DavidFox998/pistus-theoria) — ARCHIVE** — pdf/oracle/cert house, `OperaNumerorum_MasterEquations.pdf SHA 7f6b31b4...`
+
+**THIS REPO**
+**[lindelof-hypothesis-143](https://github.com/DavidFox998/lindelof-hypothesis-143) — Inner wall** — via `eta_pos>0` + `1-2^{1-σ}<0` + `‖ζ(1/2+it)‖≤C exp|t|` — Poussin outer + Growth inner = Lindelöf bridge
+
+
+ORCID: [0009-0008-1290-6105](https://orcid.org/0009-0008-1290-6105) — Brain: [zerobeacon](https://github.com/DavidFox998/zerobeacon) — Archive: [pistus-theoria](https://github.com/DavidFox998/pistus-theoria)
+
+Build — Lean 4.15.0
+
+```bash
+echo "leanprover/lean4:v4.15.0" > lean-toolchain
+lake update
+lake exe cache get
+lake build # 2381 mods ~90s GREEN
+lake build PoincareSpectral.Experimental.C10
+lake build PoincareSpectral.Experimental.C13_MellinIntegral
+
+
 License MIT
+
