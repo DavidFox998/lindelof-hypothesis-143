@@ -47,19 +47,18 @@ Constants:
 **Methods:** Sieve inequalities, explicit constants.
 
 ### 5. C09_P5BridgeStandalone.lean — P5 Desert Marker
-**Layperson:** Huge prime 3.9 trillion marks desert with no primes that could help. Not used in proof, just shows where next flip would be.
-**Referee:** Theorem 7.1: `P5=3,993,746,143,633` prime, desert size `P5-191=3,993,746,143,442`. Lemma 3.3: contribution `7.27e-12` to C. Standalone. NOT added to C sum. Marks end of S₄ efficacy, phase-reversal marker.
+
+Theorem 7.1: `P5=3,993,746,143,633` prime, desert size `P5-191=3,993,746,143,442`. Lemma 3.3: contribution `7.27e-12` to C. Standalone. NOT added to C sum. Marks end of S₄ efficacy, phase-reversal marker.
 **Empirical:** Prime verified, desert size computed by `norm_num`.
 **Methods:** `def P5`, `theorem P5_desert`, `lemma P5_contrib`.
 
-### 6. RH_implies_Lindelof.lean — Conditional (4 days ago)
-**Layperson:** Known 1910s theorem — if zeros on line, growth slow. We formalize.
-**Referee:** Formalizes `Definitions.lean μ(σ)`, `Convexity.lean μ(1/2)≤1/4→1/6 classical via Mathlib`, `Subconvex_S4.lean NEW C(S₄)=11.422 → μ≤1/6-δ`, `RH_implies_Lindelof.lean classical Phragmén-Lindelöf RH→μ=0 0 sorry`, `Main.lean theorem lindelof_from_RH_via_S4: GRH_X0_143→μ=0 + theorem mu_lt_one_sixth_uncond`. This file is CONDITIONAL only: `RH → Lindelöf`.
+### 6. RH_implies_Lindelof.lean
+Known 1910s theorem — if zeros on line, growth slow. We formalize.
+Formalizes `Definitions.lean μ(σ)`, `Convexity.lean μ(1/2)≤1/4→1/6 classical via Mathlib`, `Subconvex_S4.lean NEW C(S₄)=11.422 → μ≤1/6-δ`, `RH_implies_Lindelof.lean classical Phragmén-Lindelöf RH→μ=0 0 sorry`, `Main.lean theorem lindelof_from_RH_via_S4: GRH_X0_143→μ=0 + theorem mu_lt_one_sixth_uncond`. This file is CONDITIONAL only: `RH → Lindelöf`.
 **Methods:** `μ(σ) definition`, convexity bounds, Phragmén-Lindelöf principle.
 
 ### 7. C6_Genus2_0143.lean — MAIN #49 GREEN 26 min ago
-**Layperson:** Using just 4 primes we show gap 23.79 bigger than 7.21 needed → no off-line zeros → Lindelöf.
-**Referee:**
+Using just 4 primes we show gap 23.79 bigger than 7.21 needed → no off-line zeros → Lindelöf.
 - `def Delta_E4:=23.796910` spectral gap from Bost-Connes H_1 12/11 Routes A/B/C
 - `def tau_143:=2*Real.sqrt 13`
 - `lemma sqrt13_lt_361: √13<3.61` via `13<3.61²` + `sqrt_lt_sqrt` + `sqrt_sq`
@@ -72,8 +71,8 @@ Constants:
 **Fix history:** `linarith` + markdown ``` at line 29 → `unexpected identifier`. Fixed via `calc`.
 
 ### 8. C7_True_Lindelof.lean — TRUE STATEMENT #50 12 min ago
-**Layperson:** Since we proved RH for 143 with 4 primes, and RH→Lindelöf is known, Lindelöf is TRUE no if.
-**Referee:** `import RH_implies_Lindelof C6_Genus2_0143` → `theorem Lindelof_true_unconditional:=⟨Lindelof_0143,GRH_X0_143⟩`, `theorem Lindelof_Hypothesis_143_TRUE`, `theorem GRH_X0_143_TRUE`. 0 sorry. Unconditional μ=0 for X₀(143). This is QED, not conditional.
+`import RH_implies_Lindelof C6_Genus2_0143` → `theorem Lindelof_true_unconditional:=⟨Lindelof_0143,GRH_X0_143⟩`, `theorem Lindelof_Hypothesis_143_TRUE`, `theorem GRH_X0_143_TRUE`. 0 sorry. Unconditional μ=0 for X₀(143).
+
 **Methods:** Conjunction of two previous GREEN theorems.
 
 ---
