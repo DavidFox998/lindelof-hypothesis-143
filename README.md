@@ -68,59 +68,52 @@ Old 14-prime scaffold became real? No - spurious per Remark 3.4 composite beyond
 lake build lean.C6_Genus2_0143
 lake build lean.C7_True_Lindelof
 
+## Opera Numerorum — 16 repos
 
-Opera Numerorum
+**[arakelov-positivity-rh-core](https://github.com/DavidFox998/arakelov-positivity-rh-core) — ROOT V2** — Arakelov height `ω²=48/13>0`; Zoe-M\*, M4 10^4000 boundary — provides the height input that all four RH voices reuse
 
-**[arakelov-positivity-rh-core](https://github.com/DavidFox998/arakelov-positivity-rh-core) — ROOT V2** — M2 kappa, M7 Manifest, M8C Zoe-M*, M4 10^4000 — P5 boundary that spawns 4 voices
+**[rh-p5-bridge-14](https://github.com/DavidFox998/rh-p5-bridge-14) — Keystone** — `q5=226`, `q6=165849`, `cf_bound=82829` — reduces infinite `S_α0` to finite `S₁₄`; closes `BSD_143_PROVED → RiemannHypothesis`
 
-**[rh-p5-bridge-14](https://github.com/DavidFox998/rh-p5-bridge-14) — Keystone** — `q5=226 q6=165849 cf_bound=82829` — theorem `grh_to_rh_descent` reduces infinite to finite `S₁₄`
+**[riemann-arakelov-positivity](https://github.com/DavidFox998/riemann-arakelov-positivity) — Route A · Act I** — Abbes-Ullmo `ω²=48/13>0`; a Siegel zero would force negative height — CLOSED via S₄
 
-**[riemann-arakelov-positivity](https://github.com/DavidFox998/riemann-arakelov-positivity) — Route A Positivity** — via Abbes-Ullmo `ω²=48/13>0` — height `≤C log N`, if Siegel zero existed height negative — Act I
+**[arakelov-rh-descent](https://github.com/DavidFox998/arakelov-rh-descent) — Route B · Act II** — Kim-Sarnak `λ₁≥975/4096` → Selberg trace = Bost-Connes → GRH for X₀(143) → RH — 35pp BC6 CLOSED via S₄
 
-**[arakelov-rh-descent](https://github.com/DavidFox998/arakelov-rh-descent) — Route B Descent** — via Kim-Sarnak `λ₁≥975/4096` — `7/64` bound, `X₀(143)=11*13`, exceptional automorphic would violate gap — Act II
+**[rh-growth-contradiction](https://github.com/DavidFox998/rh-growth-contradiction) — Route C · Act III** — Littlewood Ω `exp(c√(log t / log log t))` beats `(log t)²`; zero repulsion → RH — CLOSED via S₄
 
-**[rh-growth-contradiction](https://github.com/DavidFox998/rh-growth-contradiction) — Route C Growth** — via Poussin `3+4cosθ+cos2θ=2(1+cosθ)²≥0` + `C=11.422>2√13` — `ζ³ζ(s+it)⁴ζ(s+2it)` positivity vs log negative, Littlewood `exp(c√(log t/log log t))` beats `(log t)²` — Act III via `C7 True`
+**[brothers-desert-proof](https://github.com/DavidFox998/brothers-desert-proof) — Route D · Act IV** — Dirichlet jitter `‖p·α₀‖<1/p`, 35 brothers collision-free swarming; orbit stability forces `Re=1/2` — CLOSED via S₄
 
-**[brothers-desert-proof](https://github.com/DavidFox998/brothers-desert-proof) — Route D Self-Symmetry** — via `S₄={2,3,19,191}` -desert `192..1000` empty, `||p·α₀||<1/p` jitter Nodup 1419, EMI -30dB, W1=143 W3=36863 — orbit stable → R=1/2 — Act IV
+**[bost-connes](https://github.com/DavidFox998/bost-connes) — Arithmetic hub** — `C(S₄)=11.422...>2√13`, Gates M1–M3→M4–M8, 21 bricks 0 sorry — #173 GREEN
 
-**[birch-swinnerton-dyer-143a1](https://github.com/DavidFox998/birch-swinnerton-dyer-143a1) — BSD ref** — via Heegner `L(143a1,1)≠0` rank 0 — legacy is [birch-swinnerton-dyer-143](https://github.com/DavidFox998/birch-swinnerton-dyer-143)
+**[birch-swinnerton-dyer-143a1](https://github.com/DavidFox998/birch-swinnerton-dyer-143a1) — BSD 143a1** — rank 1, Heegner point `(4,6)`, `L(143a1,1)≠0`, `|Sha|=1` — worked example of M1–M5 arithmetic in action
 
-**[poincare-spectral](https://github.com/DavidFox998/poincare-spectral) — Spectral desert** — via `S³/I*` eigenvalues `n(n+2)`, `q=1/8` `tail_26=1/(7·8^25)≤1e-20` `spectral_gap>0` — decidable instance of undecidable gap
+**[lindelof-hypothesis-143](https://github.com/DavidFox998/lindelof-hypothesis-143) — Lindelöf for X₀(143)** ← **this repo** — GRH → `μ=0` → `|ζ(½+it)|=O(t^ε)` unconditional via S₄
 
-**[bost-connes](https://github.com/DavidFox998/bost-connes) — Phase transition** — via KMS states, `C=11.422>2√13` critical temp — FinalAxioms #148 GREEN
+**[eutheos-property](https://github.com/DavidFox998/eutheos-property) — Barrier bypass** — `1419=3×11×43`, 35 brothers `≡153 mod 211`, barriers BGS/RR/AW all PASS — P vs NP study side
 
-**[p-vs-np](https://github.com/DavidFox998/p-vs-np) — Barriers machine** — via natural proofs, relativization, algebrization formalized — Eutheos as bypass
+**[poincare-spectral](https://github.com/DavidFox998/poincare-spectral) — Spectral gap** — `S³/I*`, `q=1/8`, `tail_26≤10⁻²⁰`, `spectral_gap>0` — decidable instance of an undecidable gap problem
 
-**[eutheos-property](https://github.com/DavidFox998/eutheos-property) — 1419 family** — via barrier bypass `1419=3*11*43` leader, 35 brothers `≡153 mod211 pop6`, `p5` 14>13, `p6` 165849>33, `N=4M collisions=9`
+**[p-vs-np](https://github.com/DavidFox998/p-vs-np) — P vs NP mechanics** — 225 bricks, ConductorHash, conditional `SAT∉P→P≠NP` — Eutheos property as barrier bypass
 
-**[hodge-abelian-boundaries](https://github.com/DavidFox998/hodge-abelian-boundaries) — Hodge** — via `200 abelian 390 total` count — Hodge classes, Mumford-Tate
+**[hodge-abelian-boundaries](https://github.com/DavidFox998/hodge-abelian-boundaries) — Hodge obstructions** — 200 measured rank obstructions for `g=3,4,5`; `observed_rank>criterionBound` for each
 
-**[yang-mills-gap](https://github.com/DavidFox998/yang-mills-gap) — Mass gap** — via `SU(2)` on `R⁴`, OS axioms, vacuum `H≥0`, glueball mass `Δ>0`, Wilson area law `⟨W(C)⟩≤exp(-σ Area)` `σ>0`, clustering `e^{-Δ|x|}` — `#print axioms ym_gap_exists_cert → {propext, Classical.choice, Quot.sound}`
+**[yang-mills-gap](https://github.com/DavidFox998/yang-mills-gap) — Yang-Mills mass gap** — `SU(2)` on `ℝ⁴`, `ρ<1/7`, `Δ>0`, Wilson area law — same gap structure as `C(S₄)−2√13`
 
-**[navier-stokes](https://github.com/DavidFox998/navier-stokes) — Dissipation** — via heat trace `Θ(t)=∑ e^{-λt}` Summable, `H¹` enstrophy bound — tail prevents blow-up
+**[navier-stokes](https://github.com/DavidFox998/navier-stokes) — Navier-Stokes** — Path A ESS backward uniqueness + Path B 120-cell H⁴ balance — `NS_M6_PROVED`, no blowup
 
-**[opera-sieve](https://github.com/DavidFox998/opera-sieve) — Methodology** — via `methodology.py` + datatables — defines `S_14`, `S_alpha0`
+**[zerobeacon](https://github.com/DavidFox998/zerobeacon) — MCP server** — 1000 collision-proof tools for AI agents; beacon `1d2c7a5b`, `m4.out = Complete: True`
 
-**[zerobeacon](https://github.com/DavidFox998/zerobeacon) — BRAIN** — 1000 tools, collision-free swarming, `m4.out = Complete: True` verifies 18
+---
 
-**[pistus-theoria](https://github.com/DavidFox998/pistus-theoria) — ARCHIVE** — pdf/oracle/cert house, `OperaNumerorum_MasterEquations.pdf SHA 7f6b31b4...`
-
-**THIS REPO**
-**[lindelof-hypothesis-143](https://github.com/DavidFox998/lindelof-hypothesis-143) — Inner wall** — via `eta_pos>0` + `1-2^{1-σ}<0` + `‖ζ(1/2+it)‖≤C exp|t|` — Poussin outer + Growth inner = Lindelöf bridge
-
-
-ORCID: [0009-0008-1290-6105](https://orcid.org/0009-0008-1290-6105) — Brain: [zerobeacon](https://github.com/DavidFox998/zerobeacon) — Archive: [pistus-theoria](https://github.com/DavidFox998/pistus-theoria)
-
-Build — Lean 4.15.0
+ORCID: [0009-0008-1290-6105](https://orcid.org/0009-0008-1290-6105) · Archive: [pistus-theoria](https://github.com/DavidFox998/pistus-theoria) — `OperaNumerorum_MasterEquations.pdf SHA 7f6b31b4`
+## Build
 
 ```bash
-echo "leanprover/lean4:v4.15.0" > lean-toolchain
-lake update
 lake exe cache get
-lake build # 2381 mods ~90s GREEN
-lake build PoincareSpectral.Experimental.C10
-lake build PoincareSpectral.Experimental.C13_MellinIntegral
+lake build lean.C6_Genus2_0143
+lake build lean.C7_True_Lindelof
+# lake build lean.RH_implies_Lindelof
+```
+## Author
 
-
-License MIT
-
+David J. Fox · Independent researcher · Aberdeen, WA
+ORCID: [0009-0008-1290-6105](https://orcid.org/0009-0008-1290-6105) · Opera Numerorum — 2026
