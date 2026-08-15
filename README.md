@@ -1,5 +1,8 @@
 # Lindelöf Hypothesis for level 143 — Unconditional μ=0 via S₄={2,3,19,191}
 
+> **Opera Numerorum ensemble** — 19 repos · chain `7472f4e5` · [REPOS.md →](https://github.com/DavidFox998/rh-p5-bridge-14/blob/main/REPOS.md)
+
+
 Build #49 GREEN Lean 4.12 0 sorry main track Commit 5ccc9ee
 
 Proves |ζ(1/2+it)| = O(t^ε) for any ε>0 for X₀(143). 
