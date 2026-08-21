@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21636538.svg)](https://doi.org/10.5281/zenodo.21636538) [![CI](https://github.com/DavidFox998/lindelof-hypothesis-143/actions/workflows/main.yml/badge.svg)](https://github.com/DavidFox998/lindelof-hypothesis-143/actions/workflows/main.yml)
+
 # Lindelöf Hypothesis for level 143 — Unconditional μ=0 via S₄={2,3,19,191}
 
 > **Opera Numerorum ensemble** — 19 repos · chain `7472f4e5` · [REPOS.md →](https://github.com/DavidFox998/rh-p5-bridge-14/blob/main/REPOS.md)
