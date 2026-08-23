@@ -123,4 +123,3 @@ lake build lean.C7_True_Lindelof
 
 David J. Fox · Independent researcher · Aberdeen, WA
 ORCID: [0009-0008-1290-6105](https://orcid.org/0009-0008-1290-6105) · Opera Numerorum — 2026
-
