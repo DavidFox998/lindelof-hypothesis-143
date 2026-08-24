@@ -1,31 +1,29 @@
 {
-  "title": "Lindelöf Hypothesis for X₀(143) — Unconditional μ=0 via S₄={2,3,19,191}",
-  "description": "Unconditional proof of Lindelöf exponent μ(1/2)=0 for X₀(143) via 4-prime S₄ certificate. Build #49 GREEN Lean 4.12. Proves Δ_E^{(4)}=23.796910 > τ=2√13=7.211 → GRH X₀(143) TRUE (Theorem 9.5), then via Phragmén-Lindelöf → μ=0 TRUE (θ=0.055<0.143). S₄={2,3,19,191} C(S₄)=1.433... Lemma 3.2. P5=3,993,746,143,633 desert marker Theorem 7.1 contribution 7.27e-12 Lemma 3.3 not in C sum. 14-prime C≈8.629 spurious Remark 3.4. 8 Lean files all GREEN, 0 sorry main track, 2440 jobs. lean/C6_Genus2_0143.lean MAIN fix: calc 2*√13<2*3.61=7.22<23.79 (was linarith failed). lean/C7_True_Lindelof.lean TRUE statement unconditional.",
+  "title": "Lindelöf Hypothesis for X₀(143) — Formalization via S₄",
+  "upload_type": "software",
+  "description": "Lean 4 formalization of the formalization of the Lindelöf Hypothesis route for X₀(143), using S₄ = {2, 3, 19, 191} and the μ = 0 growth statement. This repository is part of David Fox's Opera Numerorum ensemble.",
   "creators": [
     {
       "name": "Fox, David",
-      "affiliation": "Independent"
+      "affiliation": "Opera Numerorum",
+      "orcid": "0009-0008-1290-6105"
     }
   ],
   "license": "MIT",
   "keywords": [
-    "Lindelöf hypothesis",
-    "Riemann hypothesis",
-    "X0(143)",
-    "Selberg trace formula",
-    "Bost-Connes",
+    "Lindelöf Hypothesis",
+    "X₀(143)",
+    "Riemann zeta function",
+    "μ = 0",
     "Lean 4",
-    "μ=0",
-    "GRH",
-    "prime certificate",
-    "S4={2,3,19,191}"
+    "formal verification",
+    "Opera Numerorum"
   ],
-  "upload_type": "software",
   "access_right": "open",
   "related_identifiers": [
     {
-      "relation": "isSupplementTo",
       "identifier": "https://github.com/DavidFox998/lindelof-hypothesis-143",
+      "relation": "isSupplementTo",
       "resource_type": "software"
     }
   ],
@@ -33,5 +31,6 @@
     {
       "identifier": "lean"
     }
-  ]
+  ],
+  "language": "en"
 }
