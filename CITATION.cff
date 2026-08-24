@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+title: "Lindelöf Hypothesis for X₀(143) — Formalization via S₄"
+message: "If you use this software, please cite it as below."
+type: software
+authors:
+  - family-names: Fox
+    given-names: David
+    orcid: "https://orcid.org/0009-0008-1290-6105"
+    affiliation: "Opera Numerorum"
+license: MIT
+repository-code: "https://github.com/DavidFox998/lindelof-hypothesis-143"
+keywords:
+  - "Lindelöf Hypothesis"
+  - "X₀(143)"
+  - "Riemann zeta function"
+  - "μ = 0"
+  - "Lean 4"
+  - "formal verification"
+  - "Opera Numerorum"
+abstract: "Lean 4 formalization of the formalization of the Lindelöf Hypothesis route for X₀(143), using S₄ = {2, 3, 19, 191} and the μ = 0 growth statement. This repository is part of David Fox's Opera Numerorum ensemble."
